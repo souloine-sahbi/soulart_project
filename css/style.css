@@ -1,0 +1,349 @@
+/* General */
+body {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #264653;
+    background: #FAF3E0;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Navbar */
+.navbar-home {
+    position: fixed;  /* Fix navbar at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;  /* Ensure it's above the background */
+    background: transparent;  /* Make navbar background transparent */
+}
+
+/* Logo inside the navbar */
+/* Logo inside the navbar */
+.navbar-home .logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #2A9D8F;
+    margin-left: 40px;  /* Add margin to the left to move the logo slightly to the right */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Logo hover effect */
+.navbar-home .logo:hover {
+    color: #fff;  /* Change the text color on hover */
+}
+
+
+/* Navigation buttons container */
+.nav-buttons {
+    display: flex;  /* Display buttons in a row */
+    gap: 10px;  /* Add space between the buttons */
+    margin-right: 40px;  /* Add margin to move the buttons slightly to the left */
+    justify-content: flex-end;  /* Align buttons to the right */
+    align-items: center;  /* Vertically center the buttons */
+}
+
+/* Individual button styles */
+.nav-buttons .btn {
+    background: #2A9D8F;
+    border: none;
+    padding: 8px 40px;  /* Decrease the height and increase the width */
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;  /* Prevent the buttons from wrapping */
+}
+
+/* Button hover effect */
+.nav-buttons .btn:hover {
+    background: #264653;  /* Darker shade for hover effect */
+}
+
+
+
+/* Banner - First Section Only */
+.banner {
+    background-image: url('../images/background1.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;  /* Adjust the height of the banner section */
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 0;  /* Remove any extra padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertically center content */
+    align-items: center;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 70, 83, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.banner .site-name {
+    font-size: 48px;
+    margin: 0;
+    color: #FAF3E0;
+    z-index: 2;
+}
+
+.banner .slogan {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #2A9D8F;
+    z-index: 2;
+}
+
+/* Presentation */
+.presentation {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.presentation h2 {
+    color: #2A9D8F;
+}
+
+.presentation p {
+    color: #264653;
+    font-size: 16px;
+}
+
+/* Services */
+.services {
+    padding: 40px 20px;
+    text-align: center;
+    background: #FAF3E0;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #264653;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.service {
+    text-align: center;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    background: #2A9D8F;
+    color: white;
+}
+
+.service img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 20px;
+    color: #264653;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 14px;
+    color: #264653;
+}
+
+/* FAQ */
+.faq {
+    padding: 40px 20px;
+    background: #FAF3E0;
+}
+
+.faq h2 {
+    font-size: 28px;
+    color: #264653;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin: 10px 0;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #2A9D8F;
+}
+
+.faq-item p {
+    font-size: 14px;
+    color: #264653;
+}
+
+/* Footer */
+.footer {
+    background: #264653;
+    color: #FAF3E0;
+    text-align: center;
+}
+
+.footer .social-media a {
+    color: #2A9D8F;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+
+/* Navbar for Sign In and Sign Up Pages */
+.navbar-sign {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background: #417D7A; /* Dark background */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-sign .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white; /* White text for visibility */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-sign .logo:hover {
+    color: #264653; /* Slight color change on hover */
+}
+
+/* Form Container */
+.form-container {
+    margin-top: 80px; /* Adjust this to give space for the navbar */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* This makes sure the form container takes enough height to push the footer down */
+    box-sizing: border-box;
+}
+
+.form-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #417D7A;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #417D7A;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.options {
+    margin-top: 10px;
+}
+
+.forgot-password {
+    color: #417D7A;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: #264653;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #417D7A;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #264653;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+p a {
+    color: #417D7A;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: #264653;
+}
