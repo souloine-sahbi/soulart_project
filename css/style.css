@@ -347,3 +347,639 @@ p a {
 p a:hover {
     color: #264653;
 }
+
+/* Gallery Section */
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #FAF3E0;
+}
+
+.gallery-title {
+    font-size: 32px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between the cards */
+}
+
+/* General Styles for Category Cards */
+.category-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.category-card h2, .category-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 10px 15px;
+}
+
+.category-card h2 {
+    font-size: 20px;
+    color: #264653;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    font-size: 14px;
+    color: #264653;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    backdrop-filter: blur(2px); /* Blur effect */
+    z-index: 1;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category-card:hover::before {
+    backdrop-filter: blur(6px); /* Increase blur on hover */
+}
+
+.category-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.paintings-card {
+    background-image: url('../images/background2.jpg'); /* Replace with actual image path */
+}
+
+.sketches-card {
+    background-image: url('../images/sketches-bg.jpg'); /* Replace with actual image path */
+}
+
+.digital-art-card {
+    background-image: url('../images/digital-art-bg.jpg'); /* Replace with actual image path */
+}
+
+
+
+/* Gallery Page Banner */
+.gallery-banner {
+    background-image: url('../images/background4.jpg'); /* Replace with the correct image path */
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Adjust the height as needed */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.gallery-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 70, 83, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.gallery-banner .banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.gallery-banner .site-name {
+    font-size: 48px;
+    margin: 0;
+    color: #FAF3E0;
+}
+
+.gallery-banner .slogan {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #2A9D8F;
+}
+
+/* Category Banner */
+.category-banner {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.category-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+    z-index: 1;
+}
+
+.category-banner .banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.paintings-banner {
+    background-image: url('../images/paintings-banner.jpg'); /* Replace with actual banner image */
+}
+
+/* Artworks Section */
+.artworks {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+/* Art Grid */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically adjust columns */
+    gap: 20px;
+    justify-content: center; /* Center the grid horizontally */
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit maximum width of the grid */
+}
+
+.artworks h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #264653;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.art-card {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.art-card:hover {
+    transform: scale(1.05);
+}
+
+.art-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.art-card h3 {
+    font-size: 18px;
+    color: #264653;
+    margin: 10px 0;
+}
+
+.art-card .btn {
+    background-color: #2A9D8F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.art-card .btn:hover {
+    background-color: #264653;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Sketches Banner */
+.sketches-banner {
+    background-image: url('../images/sketches-banner.jpg'); /* Replace with the actual path */
+}
+
+/* Digital Art Banner */
+.digital-art-banner {
+    background-image: url('../images/digital-art-banner.jpg'); /* Replace with the actual path */
+}
+
+/* Profile Icon Styles */
+.nav-buttons .profile-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    text-decoration: none;
+    color: #264653; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-buttons .profile-icon .icon {
+    width: 32px; /* Size of the circle */
+    height: 32px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover; /* Ensures the image fits within the circle */
+    border: 2px solid #2A9D8F; /* Optional border */
+    background-color: #FAF3E0; /* Fallback color if no image */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.nav-buttons .profile-icon .icon:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+.nav-buttons .profile-icon:hover {
+    text-decoration: underline; /* Underlines text on hover */
+    color: #2A9D8F; /* Changes text color on hover */
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-details h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #264653;
+}
+
+.profile-email {
+    font-size: 16px;
+    color: #2A9D8F;
+    margin: 5px 0;
+}
+
+.profile-bio {
+    font-size: 14px;
+    color: #264653;
+    margin: 10px 0;
+}
+
+.update-btn {
+    background-color: #2A9D8F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+    background-color: #264653;
+}
+
+/* Artworks Section */
+.artworks {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.artworks h2 {
+    font-size: 24px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.add-artwork-btn {
+    background-color: #E76F51;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-artwork-btn:hover {
+    background-color: #D62828;
+}
+
+/* Modal */
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #FAF3E0;
+    max-width: 500px;
+    margin: auto;
+}
+
+.save-changes-btn {
+    background-color: #2A9D8F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-changes-btn:hover {
+    background-color: #264653;
+}
+
+/* Modal Styling */
+.modal-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.modal-container summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-container .modal-content {
+    padding: 20px;
+    background: #FAF3E0;
+    border: 2px solid #2A9D8F;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.modal-container .modal-content h2 {
+    margin-top: 0;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #2A9D8F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1E705A;
+}
+
+/* Basket Section */
+.basket {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #FAF3E0;
+}
+
+.basket h2 {
+    font-size: 32px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.basket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.basket-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.basket-item:hover {
+    transform: scale(1.05);
+}
+
+.basket-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.item-details h3 {
+    font-size: 18px;
+    color: #264653;
+    margin: 10px 0;
+}
+
+.item-details p {
+    font-size: 16px;
+    color: #2A9D8F;
+    margin-bottom: 15px;
+}
+
+.remove-btn {
+    background-color: #E76F51;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #D62828;
+}
+
+.buy-btn {
+    background-color: #2A9D8F;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #1E705A;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #264653;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-changes-btn {
+    background-color: #2A9D8F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.save-changes-btn:hover {
+    background-color: #1E705A;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #264653;
+    cursor: pointer;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketches - SoulART</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar-home">
+            <a href="gallery.html" class="logo">SoulART</a>
+            <div class="nav-buttons">
+                <a href="logout.html" class="btn">Log Out</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="category-banner sketches-banner">
+        <div class="banner-content">
+            <h1>Sketches</h1>
+            <p>Discover the intricacies of artistic sketches from brilliant minds worldwide.</p>
+        </div>
+    </section>
+
+    <!-- Artworks Section -->
+    <section class="artworks">
+        <h2>Our Collection</h2>
+        <div class="art-grid">
+            <!-- Artwork Cards -->
+            <div class="art-card">
+                <img src="images/sketch1.jpg" alt="Sketch 1" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 1</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch2.jpg" alt="Sketch 2" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 2</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch3.jpg" alt="Sketch 3" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 3</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch4.jpg" alt="Sketch 4" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 4</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch5.jpg" alt="Sketch 5" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 5</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch6.jpg" alt="Sketch 6" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 6</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch7.jpg" alt="Sketch 7" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 7</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch8.jpg" alt="Sketch 8" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 8</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+            <div class="art-card">
+                <img src="images/sketch9.jpg" alt="Sketch 9" class="art-image" onclick="openModal(this.src)">
+                <h3>Artist 9</h3>
+                <button class="btn">Add to Basket</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Section -->
+    <div id="art-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <h3>About Us</h3>
+        <p>
+            SoulART is dedicated to supporting artists and art enthusiasts by creating a vibrant art community.
+        </p>
+        <div class="social-media">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("art-modal").style.display = "block";
+            document.getElementById("modal-image").src = src;
+        }
+
+        function closeModal() {
+            document.getElementById("art-modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
