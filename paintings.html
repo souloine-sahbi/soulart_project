@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paintings - SoulART</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     <!-- Header Section -->
@@ -12,7 +14,13 @@
         <nav class="navbar-home">
             <a href="gallery.html" class="logo">SoulART</a>
             <div class="nav-buttons">
-                <a href="logout.html" class="btn">Log Out</a>
+                <a href="basket.html">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem; color: #2A9D8F;"></i>
+                </a>
+                <a href="profile.html">
+                    <i class="fas fa-user-circle" style="font-size: 1.5rem; color: #2A9D8F;"></i>
+                </a>
+                <a href="index.html" class="btn">Log Out</a>
             </div>
         </nav>
     </header>
@@ -31,49 +39,60 @@
         <div class="art-grid">
             <!-- Artwork Cards -->
             <div class="art-card">
-                <img src="images/art1.jpg" alt="Art 1" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 1</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting1.jpg" alt="Painting 1" class="art-image" onclick="openModal(this.src)">
+                <h3>"Sunset"</h3>
+                <a href="profile.html" class="artist-name">Souloine</a>
+                <p class="price">$200</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art2.jpg" alt="Art 2" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 2</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting2.jpg" alt="Painting 2" class="art-image" onclick="openModal(this.src)">
+                <h3>"Flower"</h3>
+                <a href="profile.html" class="artist-name">Rabeb</a>
+                <p class="price">$250</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art3.jpg" alt="Art 3" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 3</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting3.jpg" alt="Painting 3" class="art-image" onclick="openModal(this.src)">
+                <h3>"Forest"</h3>
+                <a href="profile.html" class="artist-name">Souloine</a>
+                <p class="price">$300</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art4.jpg" alt="Art 4" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 4</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting4.jpg" alt="Painting 4" class="art-image" onclick="openModal(this.src)">
+                <h3>"Golden"</h3>
+                <a href="profile.html" class="artist-name">Rabeb</a>
+                <p class="price">$280</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art5.jpg" alt="Art 5" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 5</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting5.jpg" alt="Painting 5" class="art-image" onclick="openModal(this.src)">
+                <h3>"Disert"</h3>
+                <a href="profile.html" class="artist-name">Souloine</a>
+                <p class="price">$220</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art6.jpg" alt="Art 6" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 6</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting6.jpg" alt="Painting 6" class="art-image" onclick="openModal(this.src)">
+                <h3>"dark Flower"</h3>
+                <a href="profile.html" class="artist-name">Rabeb</a>
+                <p class="price">$240</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art7.jpg" alt="Art 7" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 7</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting7.jpg" alt="Painting 6" class="art-image" onclick="openModal(this.src)">
+                <h3>"Oceon Flower"</h3>
+                <a href="profile.html" class="artist-name">Rabeb</a>
+                <p class="price">$240</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
             <div class="art-card">
-                <img src="images/art8.jpg" alt="Art 8" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 8</h3>
-                <button class="btn">Add to Basket</button>
-            </div>
-            <div class="art-card">
-                <img src="images/art9.jpg" alt="Art 9" class="art-image" onclick="openModal(this.src)">
-                <h3>Artist 9</h3>
-                <button class="btn">Add to Basket</button>
+                <img src="images/painting8.jpg" alt="Painting 6" class="art-image" onclick="openModal(this.src)">
+                <h3>"Men"</h3>
+                <a href="profile.html" class="artist-name">Rabeb</a>
+                <p class="price">$240</p>
+                <button class="btn" onclick="showAddSuccess()">Add to Basket</button>
             </div>
         </div>
     </section>
@@ -84,6 +103,16 @@
         <img class="modal-content" id="modal-image">
     </div>
 
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('success-modal').style.display='none'">&times;</span>
+            <h2>Added to Basket</h2>
+            <p>Your selected artwork has been added to your basket successfully.</p>
+            <button class="btn" onclick="document.getElementById('success-modal').style.display='none'">Close</button>
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer class="footer">
         <h3>About Us</h3>
@@ -91,7 +120,7 @@
             SoulART is dedicated to supporting artists and art enthusiasts by creating a vibrant art community.
         </p>
         <div class="social-media">
-            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            <a href="https://www.facebook.com/Souloineart">Facebook</a> | <a href="https://www.instagram.com/souloineart/">Instagram</a> 
         </div>
     </footer>
 
@@ -103,6 +132,10 @@
 
         function closeModal() {
             document.getElementById("art-modal").style.display = "none";
+        }
+
+        function showAddSuccess() {
+            document.getElementById("success-modal").style.display = "block";
         }
     </script>
 </body>

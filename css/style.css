@@ -247,7 +247,6 @@ h1, h2, h3 {
     font-size: 32px;
     font-weight: bold;
     color: white; /* White text for visibility */
-    text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -412,7 +411,7 @@ p a:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    backdrop-filter: blur(2px); /* Blur effect */
+    backdrop-filter: blur(1px); /* Blur effect */
     z-index: 1;
 }
 
@@ -431,15 +430,15 @@ p a:hover {
 }
 
 .paintings-card {
-    background-image: url('../images/background2.jpg'); /* Replace with actual image path */
+    background-image: url('../images/paintings.jpg'); /* Replace with actual image path */
 }
 
 .sketches-card {
-    background-image: url('../images/sketches-bg.jpg'); /* Replace with actual image path */
+    background-image: url('../images/sketche.jpg'); /* Replace with actual image path */
 }
 
 .digital-art-card {
-    background-image: url('../images/digital-art-bg.jpg'); /* Replace with actual image path */
+    background-image: url('../images/digital-art.jpg'); /* Replace with actual image path */
 }
 
 
@@ -518,7 +517,7 @@ p a:hover {
 }
 
 .paintings-banner {
-    background-image: url('../images/paintings-banner.jpg'); /* Replace with actual banner image */
+    background-image: url('../images/paintings.jpg'); /* Replace with actual banner image */
 }
 
 /* Artworks Section */
@@ -623,12 +622,12 @@ p a:hover {
 
 /* Sketches Banner */
 .sketches-banner {
-    background-image: url('../images/sketches-banner.jpg'); /* Replace with the actual path */
+    background-image: url('../images/sketche.jpg'); /* Replace with the actual path */
 }
 
 /* Digital Art Banner */
 .digital-art-banner {
-    background-image: url('../images/digital-art-banner.jpg'); /* Replace with the actual path */
+    background-image: url('../images/digital-art.jpg'); /* Replace with the actual path */
 }
 
 /* Profile Icon Styles */
@@ -983,3 +982,11 @@ p a:hover {
     color: #264653;
     cursor: pointer;
 }
+
+/*price of art work */
+.price {
+    font-size: 16px;
+    color: #2A9D8F;
+    margin: 5px 0;
+}
+
